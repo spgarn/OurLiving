@@ -1,26 +1,63 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
+import LogIn from './components/LogIn';
+import SignUp from './components/SignUp';
+import Registered from './components/Registered';
+import { Auth } from 'aws-amplify';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+
+  state = {
+    isAuthenticated: false,
+    isauthenticating: true,
+    user: null
+  }
+
+  setAuthStatus = authenticated => {
+    this.setState({ isAuthenticated: authenticated })
+  }
+
+  setUser = user => {
+    this.setState({ user: user })
+  }
+
+  async componentDidMount() {
+    try {
+      const session = await Auth.currentSession();
+      this.setAuthStatus(true);
+      console.log(session);
+      const user = await Auth.currentAuthenticatedUser();
+      this.setUser(user);
+    } catch (error) {
+      console.log(error);
+    }
+    this.setState({ isAuthenticating: false });
+  }
+
+  render() {
+    const authProps = {
+      isAuthenticated: this.state.isAuthenticated,
+      user: this.state.user,
+      setAuthStatus: this.setAuthStatus,
+      setUser: this.setUser
+    }
+    return (
+      !this.state.isAuthenticating &&
+      <div>
+        <Router>
+          <div>
+            <Switch>
+              <Route exact path="/" render={(props) => <LogIn {...props} auth={authProps} />} />
+              <Route exact path="/Sign-up" render={(props) => <SignUp {...props} auth={authProps} />} />
+              <Route exact path="/Registered" render={(props) => <Registered {...props} auth={authProps} />} />
+            </Switch>
+          </div>
+        </Router>
+      </div>
+
+    );
+  }
 }
 
 export default App;

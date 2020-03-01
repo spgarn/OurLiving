@@ -1,38 +1,100 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+  background-image: url('/img/OurLivingBG.png');
+  background-size: cover;
+  background-position: bottom;
+  display:flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.buttons {
+  background-color: #84ac44; /* Main Green */
+  color: #000000;
+  border: none;
+  border-radius: 6px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.buttons:hover{
+  color: #000000;
+  background-color: #353535;
+  cursor: pointer;
+}
+@media all and (max-width:30em){
+  .buttons{
+    display:block;
+    margin:0.4em auto
   }
-  to {
-    transform: rotate(360deg);
+}
+
+.signUpBackground{
+height: 300px;
+min-width: 330px;
+background-color: white;
+width: 20%;
+display:flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+padding: 20px;
+box-shadow: 
+     inset 0 -3em 3em rgba(0,0,0,0.1), 
+           0 0  0 2px rgb(255,255,255),
+           0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+  
+
+
+.signUpText{
+  height: 100%;
+  width: 100%;
+  font-family: 'Roboto';
   }
+
+
+.signUpButtons{
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 15px;
+  }
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+  }
+
+input[type=password], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+  }
+
+td{
+  font-family: 'Roboto';
+  border: 1px solid #84ac44; ;
+  border-radius: 5px;
+}
+th{
+  font-family: 'Roboto';
 }

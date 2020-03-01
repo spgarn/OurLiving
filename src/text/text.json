@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "Title": "Helsingborg",
+    "Kitchen": "Renoverat 2015",
+    "Bathroom": "Renoverat 2016",
+    "OutColor": "Helmatt vit"
+  },
+  {
+    "id": 2,
+    "Title": "Malmö",
+    "Kitchen": "Renoverat 2012",
+    "Bathroom": "Renoverat 2019",
+    "OutColor": "Blank svart"
+  },
+  {
+    "id": 3,
+    "Title": "Göteborg",
+    "Kitchen": "Renoverat 1999",
+    "Bathroom": "Renoverat 2005",
+    "OutColor": "Matt grå"
+  }
+]
