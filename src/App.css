@@ -1,52 +1,49 @@
+*{
+    font-family: 'Roboto';
+}
+
 .App {
-  background-image: url('/img/OurLivingBG.png');
-  background-size: cover;
-  background-position: bottom;
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: 100vh;
+    background-image: url('/img/OurLivingBG.png');
+    background-size: cover;
+    background-position: bottom;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
 }
 
 .buttons {
-  background-color: #84ac44; /* Main Green */
-  color: #000000;
-  border: none;
-  border-radius: 6px;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
+    background-color: #84ac44; /* Main Green */
+    color: #000000;
+    border: none;
+    border-radius: 6px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }
 
 .buttons:hover{
-  color: #000000;
-  background-color: #353535;
-  cursor: pointer;
-}
-@media all and (max-width:30em){
-  .buttons{
-    display:block;
-    margin:0.4em auto
-  }
+    color: #000000;
+    background-color: #353535;
+    cursor: pointer;
 }
 
 .signUpBackground{
-height: 300px;
-min-width: 330px;
-background-color: white;
-width: 20%;
-display:flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-text-align: center;
-padding: 20px;
-box-shadow: 
-     inset 0 -3em 3em rgba(0,0,0,0.1), 
+    height: 300px;
+    min-width: 330px;
+    background-color: white;
+    width: 20%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1), 
            0 0  0 2px rgb(255,255,255),
            0.3em 0.3em 1em rgba(0,0,0,0.3);
 }
@@ -54,9 +51,8 @@ box-shadow:
 
 
 .signUpText{
-  height: 100%;
-  width: 100%;
-  font-family: 'Roboto';
+    height: 100%;
+    width: 100%;
   }
 
 
@@ -76,7 +72,6 @@ input[type=text], select {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-    font-family: 'Roboto';
   }
 
 input[type=password], select {
@@ -87,14 +82,10 @@ input[type=password], select {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-    font-family: 'Roboto';
+
   }
 
 td{
-  font-family: 'Roboto';
-  border: 1px solid #84ac44; ;
-  border-radius: 5px;
-}
-th{
-  font-family: 'Roboto';
+    border: 1px solid #84ac44; ;
+    border-radius: 5px;
 }
