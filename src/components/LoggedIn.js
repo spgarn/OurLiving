@@ -3,9 +3,8 @@ import Text from '../text/text.json'
 import '../App.css';
 
 export default function LoggedIn(props) {
-    console.log(props)
     return (
-        <div className="signUpBackground">
+        <div className="sign-up-background">
             <h4> Här finns all din information sparad.</h4>
             <table>
                 <thead>
@@ -19,10 +18,10 @@ export default function LoggedIn(props) {
                 <tbody>
                     {Text.map((data) =>
                         <tr>
-                            <td>{data.Title}</td>
-                            <td>{data.Kitchen}</td>
-                            <td>{data.Bathroom}</td>
-                            <td>{data.OutColor}</td>
+                            <td>{data.city}</td>
+                            <td>{data.kitchenRenovatedYear}</td>
+                            <td>{data.bathroomRenovatedYear}</td>
+                            <td>{data.facadeColor}</td>
                         </tr>
                     )}
                 </tbody>

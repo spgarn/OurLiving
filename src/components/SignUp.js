@@ -73,10 +73,10 @@ class SignUp extends Component {
     render() {
         return (
             <section className="section auth">
-                <div className="App">
-                    <div className="signUpBackground">
+                <div className="app">
+                    <div className="sign-up-background">
                         <FormErrors formerrors={this.state.errors} />
-                        <form className="signUpText" onSubmit={this.handleSubmit}>
+                        <form className="sign-up-text" onSubmit={this.handleSubmit}>
                             <h1><span style={{ color: '#84ac44'/*Green font*/ }}>Our</span>Living</h1>
                             <div>
                                 <span>Email</span>
@@ -97,7 +97,7 @@ class SignUp extends Component {
                                     value={this.state.password}
                                     onChange={this.onInputChange}></input>
                             </div>
-                            <div className="signUpButtons">
+                            <div className="sign-up-buttons">
                                 <button className="buttons">Sign Up</button>
                                 <a className="buttons" href="/">Back</a>
                             </div>
